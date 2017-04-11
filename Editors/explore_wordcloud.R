@@ -60,7 +60,7 @@ tw.wrd <- data.frame(word = names(tw.srt), freq = tw.srt)
 head(tw.wrd, 10)
 
 set.seed(1234)
-pdf("./Data/tweets200com.pdf", width = 7, height = 5)
+pdf("./Results/tweets200com.pdf", width = 7, height = 5)
 wordcloud(words = tw.wrd$word, freq = tw.wrd$freq, min.freq = 1,
           max.words=400, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(8, "Dark2"))
@@ -93,7 +93,7 @@ gglang
 #SET UP  TWEETS for WordCloud
 has.eng <- Corpus(VectorSource(tw$hashtag))
 has.eng <- tm_map(has.eng, removePunctuation)
-pdf("./Data/hashtag1.pdf", width = 7, height = 5)
+pdf("./Results/hashtag1.pdf", width = 7, height = 5)
 wordcloud(has.eng, max.words = 300, min.freq = 1, random.color = TRUE, random.order = FALSE) 
 dev.off()
 
@@ -105,7 +105,7 @@ head(hash.df, 10)
 
 
 
-pdf("./Data/hashtag.pdf", width = 7, height = 5)
+pdf("./Results/hashtag.pdf", width = 7, height = 5)
 wordcloud(words = hash.df$word, freq = hash.df$freq, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(8, "Dark2"))
