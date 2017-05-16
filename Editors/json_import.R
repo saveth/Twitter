@@ -21,14 +21,7 @@ summary(dat$favorited)
 str(dat$place)
 
 # Create dataset of interested variables
-#dat2 <- cbind(dat$createdAt, dat$id, dat$text, dat$source, 
-#              dat$inReplyToScreenName, dat$inReplyToStatusId, dat$inReplyToUserId,
-#              dat$geolocation, dat$favorited, dat$retweeted, dat$favoriteCount,
-#              dat$user, dat$retweet, dat$retweetCount, dat$retweetedByMe, dat$currentUserRetweetId,
-#              dat$possiblySensitive, dat$lang, dat$quotedStatusId)
-#colnames(dat2) <- gsub("dat\\$","",colnames(dat2))
-
-#user, geoplocation
+#user, geolocation are separate tables
 vars <- c("createdAt", "id", "text", "source", "inReplyToScreenName","inReplyToStatusId",
           "inReplyToUserId", "favorited", "retweeted", "favoriteCount",
           "retweet", "retweetCount", "retweetedByMe", "currentUserRetweetId",
